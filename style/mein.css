@@ -1,0 +1,20 @@
+body {  
+    transition: background-color 0.5s;  
+}  
+.but{
+   color: rgb(0, 0, 0);
+   font-size: larger;
+   position: relative;
+   right: 300px;
+}
+.but:hover{
+    background-color: bisque;
+    color: black;
+}
+.doc{
+    background-color: black;
+    color: aliceblue;
+    border-radius: 10px;
+    padding:10px;
+    font-size: 15px;
+}

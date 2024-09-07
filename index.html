@@ -2,29 +2,15 @@
 <html>  
 <head>  
     <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/mein.css">
     <title>Calculator</title>  
     <script src="https://cdn.tailwindcss.com"></script> 
-    <style>  
-        body {  
-            transition: background-color 0.5s;  
-        }  
-        .but{
-           color: rgb(0, 0, 0);
-           font-size: larger;
-           position: relative;
-           right: 300px;
-        }
-        .but:hover{
-            background-color: bisque;
-            color: black;
-        }
-    </style>   
 </head>  
 <body id="body" class="flex items-center justify-center h-screen bg-gray-100">  
-    <button class="but" type="button" onclick="document.getElementById('body').style.backgroundColor='black';">حالت شب</button>
+    <button class="but" type="button" onclick="document.getElementById('body').style.backgroundColor='black';">dark mod</button>
     <div class="bg-white shadow-lg rounded-lg p-6 w-80">  
-        <input type="text" id="result" class="w-full h-12 text-right text-xl border border-gray-300 rounded mb-4 p-2" placeholder="نتیجه" disabled />  
+        <input type="text" id="result" class="w-full h-12 text-right text-xl border border-gray-300 rounded mb-4 p-2" placeholder="sum" disabled />  
         <div class="grid grid-cols-4 gap-2">  
             <button onclick="dataNumber('7')" class="bg-blue-500 text-white h-12 rounded hover:bg-blue-600">7</button>  
             <button onclick="dataNumber('8')" class="bg-blue-500 text-white h-12 rounded hover:bg-blue-600">8</button>  
@@ -43,7 +29,11 @@
             <button onclick="dataNumber('/')" class="bg-orange-500 text-white h-12 rounded hover:bg-orange-600">÷</button>  
             <button onclick="sum()" class="bg-green-500 text-white h-12 rounded hover:bg-green-600 col-span-4">=</button>  
         </div>  
+        <h2 class="text-lg font-bold mt-4">history :</h2>  
+        <ul id="history" class="list-disc pl-5 mt-2 max-h-40 overflow-y-auto"></ul> 
+        <button class="doc" id="clearHistory" onclick="clearHistory()">delete history</button>
+ 
     </div>  
     <script src="index.js"></script>
 </body>  
-</html>  
+</html>
