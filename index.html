@@ -2,24 +2,10 @@
 <html>  
 <head>  
     <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Calculator_ASFYA/style/mein.css">
     <title>Calculator</title>  
     <script src="https://cdn.tailwindcss.com"></script> 
-    <style>  
-        body {  
-            transition: background-color 0.5s;  
-        }  
-        .but{
-           color: rgb(0, 0, 0);
-           font-size: larger;
-           position: relative;
-           right: 300px;
-        }
-        .but:hover{
-            background-color: bisque;
-            color: black;
-        }
-    </style>   
 </head>  
 <body id="body" class="flex items-center justify-center h-screen bg-gray-100">  
     <button class="but" type="button" onclick="document.getElementById('body').style.backgroundColor='black';">حالت شب</button>
@@ -43,7 +29,9 @@
             <button onclick="dataNumber('/')" class="bg-orange-500 text-white h-12 rounded hover:bg-orange-600">÷</button>  
             <button onclick="sum()" class="bg-green-500 text-white h-12 rounded hover:bg-green-600 col-span-4">=</button>  
         </div>  
+        <h2 class="text-lg font-bold mt-4">تاریخچه محاسبات:</h2>  
+        <ul id="history" class="list-disc pl-5 mt-2 max-h-40 overflow-y-auto"></ul>  
     </div>  
     <script src="index.js"></script>
 </body>  
-</html>  
+</html>
